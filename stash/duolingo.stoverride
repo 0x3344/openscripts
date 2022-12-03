@@ -1,0 +1,17 @@
+name: duolingo
+desc: duolingo @langkhach270389
+
+http:
+  mitm:
+    - 'duolingo-leaderboards-prod.duolingo.com'
+  script:
+    - match: ^https:\/\/duolingo-leaderboards-prod\.duolingo\.com\/leaderboards*
+      name: duolingo
+      type: response
+      require-body: true
+      timeout: 10
+      
+script-providers:
+  duolingo:
+    url: https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/duolingo.js
+    interval: 86400
