@@ -1,7 +1,7 @@
 name: Apk.tW 签到
 desc: Apk.tW 签到 @Chavyleung
 
-cron
+cron:
   script:
     - name: apktw
       cron: '10 2 * * *' # at every 5th minute
