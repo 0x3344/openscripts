@@ -1,0 +1,17 @@
+name: 财新-真相就读财新+解锁财新通V2
+desc: 财新-真相就读财新+解锁财新通V2(2022-10-17) @彭于晏💞
+
+http:
+  mitm:
+    - 'gateway.caixin.com'
+  script:
+    - match: ^https:\/\/gateway\.caixin\.com\/api\/ucenter\/appapi\/v1\/userinfo
+      name: caixin
+      type: request
+      require-body: true
+      timeout: 10
+      
+script-providers:
+  caixin:
+    url: https://raw.githubusercontent.com/89996462/Quantumult-X/main/gx/CaiXin.js
+    interval: 86400

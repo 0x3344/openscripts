@@ -1,0 +1,17 @@
+name: Apk.tW 获取cookie
+desc: Apk.tW 获取cookie @Chavyleung
+
+http:
+  mitm:
+    - 'apk.tw'
+  script:
+    - match: ^https://apk.tw\/member.php(.*?)action=login
+      name: apktw.cookie
+      type: request
+      require-body: true
+      timeout: 10
+      
+script-providers:
+  apktw.cookie:
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.cookie.js
+    interval: 86400

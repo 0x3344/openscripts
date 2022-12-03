@@ -1,0 +1,17 @@
+name: 哔哩哔哩+解锁大会员
+desc: 哔哩哔哩+解锁大会员(2022-10-17) @彭于晏💞
+
+http:
+  mitm:
+    - '*'
+  script:
+    - match: ^https?://*
+      name: bilibili
+      type: request
+      require-body: true
+      timeout: 10
+      
+script-providers:
+  bilibili:
+    url: https://raw.githubusercontent.com/89996462/Quantumult-X/main/gx/bilibili.js
+    interval: 86400

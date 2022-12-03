@@ -1,0 +1,13 @@
+name: Apk.tW 签到
+desc: Apk.tW 签到 @Chavyleung
+
+cron
+  script:
+    - name: apktw
+      cron: '10 2 * * *' # at every 5th minute
+      argument: '' # optional
+      timeout: 10 # optional   
+script-providers:
+  apktw:
+    url: script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.js
+    interval: 86400
