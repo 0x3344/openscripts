@@ -9,5 +9,5 @@ cron:
       timeout: 10 # optional   
 script-providers:
   apktw:
-    url: script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.js
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.js
     interval: 86400
